@@ -13,13 +13,13 @@ class CreateDatosClimasTable extends Migration
      */
     public function up()
     {
-        Schema::create('datos_clima', function (Blueprint $table) {
+        Schema::create('tbl_datosclima', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->datetime('fechaHora');
             $table->decimal('temperatura', 10, 2);
             $table->decimal('humedad', 10, 2);
             $table->unsignedBigInteger('IdDispositivo')->nullable();
-            $table->foreign('IdDispositivo')->references('id')->on('dispositivos');
+            $table->foreign('IdDispositivo')->references('id')->on('tbl_dispositivos');
             $table->timestamps();
         });
     }

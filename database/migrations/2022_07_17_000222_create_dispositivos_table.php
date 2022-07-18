@@ -13,7 +13,7 @@ class CreateDispositivosTable extends Migration
      */
     public function up()
     {
-        Schema::create('dispositivos', function (Blueprint $table) {
+        Schema::create('tbl_dispositivos', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('idEstacion');
             $table->datetime('fechaHoraReg');

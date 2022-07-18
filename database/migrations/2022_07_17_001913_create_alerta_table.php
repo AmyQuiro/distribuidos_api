@@ -13,7 +13,7 @@ class CreateAlertaTable extends Migration
      */
     public function up()
     {
-        Schema::create('alerta', function (Blueprint $table) {
+        Schema::create('tbl_alertas', function (Blueprint $table) {
             $table->bigIncrements('id');
 
             $table->decimal('valorFin', 10, 2);
